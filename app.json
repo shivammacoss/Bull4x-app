@@ -1,25 +1,29 @@
 {
   "expo": {
-    "name": "SetupFX24",
-    "slug": "setupfx24",
-    "version": "1.0.0",
-    "runtimeVersion": "1.0.0",
+    "name": "Bull4X",
+    "slug": "bull4x",
+    "version": "1.0.3",
+    "runtimeVersion": "1.0.3",
     "orientation": "portrait",
-    "icon": "./assets/Setupfx app icon.png",
+    "icon": "./assets/bull4x-app-icon.png",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/SetupFX.png",
+      "image": "./assets/splash-bull4x.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#FFFFFF"
     },
     "updates": {
       "enabled": true,
       "checkAutomatically": "ON_LOAD",
-      "fallbackToCacheTimeout": 0,
-      "url": "https://u.expo.dev/b998437a-a10b-49c5-8e51-020efdc57111"
+      "fallbackToCacheTimeout": 0
     },
     "ios": {
+      "splash": {
+        "image": "./assets/splash-bull4x.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#FFFFFF"
+      },
       "supportsTablet": true,
       "infoPlist": {
         "NSAppTransportSecurity": {
@@ -27,26 +31,35 @@
           "NSAllowsLocalNetworking": true
         }
       },
-      "bundleIdentifier": "com.setupfx24.app"
+      "bundleIdentifier": "com.bull4x.app"
     },
     "android": {
+      "usesCleartextTraffic": true,
+      "splash": {
+        "image": "./assets/splash-bull4x.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#FFFFFF"
+      },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/Setupfx app icon.png",
+        "foregroundImage": "./assets/bull4x-app-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.setupfx24.app"
+      "package": "com.bull4x.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "b998437a-a10b-49c5-8e51-020efdc57111"
-      }
-    },
     "owner": "shivam92388",
     "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-bull4x.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
+        }
+      ],
       "expo-font",
       "expo-updates"
     ]

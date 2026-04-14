@@ -9,7 +9,7 @@ Use these answers when filling out the Data Safety section in Google Play Consol
 **Yes** (SSL/TLS encryption)
 
 ## Do you provide a way for users to request that their data is deleted?
-**Yes** (Users can contact support@setupfx24.com to request data deletion)
+**Yes** (Users can contact support@bull4x.com to request data deletion)
 
 ---
 

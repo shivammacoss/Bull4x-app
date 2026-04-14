@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
+import {
+  View,
+  Image,
+  StyleSheet,
+  Dimensions,
+} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
+import * as SplashScreen from 'expo-splash-screen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthProvider } from './src/context/AuthContext';
@@ -25,6 +32,7 @@ import ChallengeRulesScreen from './src/screens/ChallengeRulesScreen';
 import BuyChallengeScreen from './src/screens/BuyChallengeScreen';
 
 const Stack = createNativeStackNavigator();
+const { width: SCREEN_W } = Dimensions.get('window');
 
 // Inner app component that can use theme
 const AppContent = () => {
@@ -62,8 +70,34 @@ const AppContent = () => {
 };
 
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  useLayoutEffect(() => {
+    let cancelled = false;
+    SplashScreen.hideAsync()
+      .then(() => new Promise((r) => setTimeout(r, 200)))
+      .then(() => {
+        if (!cancelled) setShowSplash(false);
+      })
+      .catch(() => {
+        if (!cancelled) setShowSplash(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <GestureHandlerRootView style={{ flex: 1, backgroundColor: '#000000' }}>
+      {showSplash ? (
+        <View style={styles.flashOverlay}>
+          <Image
+            source={require('./assets/splash-bull4x.png')}
+            style={styles.flashLogo}
+            resizeMode="contain"
+          />
+        </View>
+      ) : null}
       <SafeAreaProvider>
         <ThemeProvider>
           <AuthProvider>
@@ -94,3 +128,17 @@ export default function App() {
     </GestureHandlerRootView>
   );
 }
+
+const styles = StyleSheet.create({
+  flashOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 9999,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  flashLogo: {
+    width: Math.min(SCREEN_W * 0.72, 320),
+    height: Math.min(SCREEN_W * 0.72, 320),
+  },
+});

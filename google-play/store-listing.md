@@ -1,13 +1,13 @@
-# Google Play Store Listing Content for SetupFX24
+# Google Play Store Listing Content for Bull4X
 
 ## App Name (max 30 characters)
-SetupFX24 - Trading Platform
+Bull4X - Trading Platform
 
 ## Short Description (max 80 characters)
 Trade Forex, Commodities, Indices & Crypto with real-time market data.
 
 ## Full Description (max 4000 characters)
-SetupFX24 is a powerful and intuitive trading platform that gives you access to global financial markets right from your mobile device. Whether you're a beginner or an experienced trader, SetupFX24 provides the tools and real-time data you need to make informed trading decisions.
+Bull4X is a powerful and intuitive trading platform that gives you access to global financial markets right from your mobile device. Whether you're a beginner or an experienced trader, Bull4X provides the tools and real-time data you need to make informed trading decisions.
 
 KEY FEATURES:
 
@@ -51,7 +51,7 @@ SUPPORTED MARKETS:
 • Cryptocurrencies: Bitcoin, Ethereum, and popular altcoins
 
 GETTING STARTED:
-1. Download and install SetupFX24
+1. Download and install Bull4X
 2. Create your free account
 3. Complete KYC verification
 4. Fund your account
@@ -60,8 +60,8 @@ GETTING STARTED:
 RISK DISCLAIMER:
 Trading in financial instruments involves substantial risk and may not be suitable for all investors. Past performance is not indicative of future results. Please ensure you fully understand the risks involved before trading.
 
-For support, contact us at support@setupfx24.com
-Visit our website: https://setupfx24.com
+For support, contact us at support@bull4x.com
+Visit our website: https://bull4x.com
 
 ---
 
@@ -80,11 +80,11 @@ trading, forex, commodities, crypto, cryptocurrency, indices, stocks, investment
 
 ### 1. App Icon
 - **Size:** 512 x 512 px (PNG, 32-bit, alpha)
-- **File:** Use `assets/Setupfx app icon.png` (resize to 512x512 if needed)
+- **File:** Use `assets/bull4x-app-icon.png` (resize to 512x512 if needed)
 
 ### 2. Feature Graphic (REQUIRED)
 - **Size:** 1024 x 500 px (JPG or PNG)
-- **Content:** Create a banner showing the app name "SetupFX24" with trading charts/graphs in the background
+- **Content:** Create a banner showing the app name "Bull4X" with trading charts/graphs in the background
 - **Note:** You need to create this graphic. Use Canva or similar tool.
 
 ### 3. Screenshots (REQUIRED - minimum 2, recommended 4-8)
@@ -106,14 +106,14 @@ trading, forex, commodities, crypto, cryptocurrency, indices, stocks, investment
 ---
 
 ## Contact Details (for Play Console)
-- **Email:** support@setupfx24.com
-- **Website:** https://setupfx24.com
+- **Email:** support@bull4x.com
+- **Website:** https://bull4x.com
 - **Phone:** (optional)
 
 ## Privacy Policy URL
 Host the privacy-policy.html file and provide the URL, e.g.:
-https://setupfx24.com/privacy-policy
+https://bull4x.com/privacy-policy
 
 ## Account Deletion URL (REQUIRED by Google)
 Host the account-deletion-policy.html file and provide the URL, e.g.:
-https://setupfx24.com/account-deletion
+https://bull4x.com/account-deletion

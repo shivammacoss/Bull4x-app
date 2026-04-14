@@ -1,12 +1,14 @@
 {
-  "name": "setupfx24-mobile",
+  "name": "bull4x-mobile",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "backend": "npm --prefix backend start",
+    "backend:dev": "npm --prefix backend run dev"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -15,10 +17,12 @@
     "@react-navigation/native-stack": "^7.9.0",
     "expo": "~54.0.33",
     "expo-clipboard": "~8.0.8",
+    "expo-constants": "~18.0.13",
     "expo-font": "~14.0.11",
     "expo-image-picker": "~17.0.10",
     "expo-notifications": "^0.32.16",
     "expo-secure-store": "^15.0.8",
+    "expo-splash-screen": "~31.0.13",
     "expo-status-bar": "~3.0.9",
     "expo-updates": "^29.0.16",
     "react": "19.1.0",

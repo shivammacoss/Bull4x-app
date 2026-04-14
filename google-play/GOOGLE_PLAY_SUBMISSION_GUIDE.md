@@ -1,4 +1,4 @@
-# Complete Google Play Store Submission Guide for SetupFX24
+# Complete Google Play Store Submission Guide for Bull4X
 
 ## Prerequisites
 - [x] Google Play Developer Account ($25 one-time fee) - https://play.google.com/console
@@ -18,7 +18,7 @@
 
 Run this command to build the production AAB:
 ```bash
-cd /path/to/setupfx_mobile_app
+cd /path/to/bull4x_mobile
 eas build --platform android --profile production
 ```
 
@@ -36,23 +36,23 @@ After the build completes, download the `.aab` file from the EAS dashboard.
 Upload these HTML files to your server so they're publicly accessible:
 
 1. **Privacy Policy** → `privacy-policy.html`
-   - Host at: `https://setupfx24.com/privacy-policy`
+   - Host at: `https://bull4x.com/privacy-policy`
    
 2. **Terms of Service** → `terms-of-service.html`
-   - Host at: `https://setupfx24.com/terms-of-service`
+   - Host at: `https://bull4x.com/terms-of-service`
 
 3. **Account Deletion Policy** → `account-deletion-policy.html`
-   - Host at: `https://setupfx24.com/account-deletion`
+   - Host at: `https://bull4x.com/account-deletion`
 
 ### How to host on your server:
 ```bash
 # Copy HTML files to frontend public directory
-cp privacy-policy.html ~/setupfx24/frontend/public/privacy-policy.html
-cp terms-of-service.html ~/setupfx24/frontend/public/terms-of-service.html
-cp account-deletion-policy.html ~/setupfx24/frontend/public/account-deletion.html
+cp privacy-policy.html ~/bull4x/frontend/public/privacy-policy.html
+cp terms-of-service.html ~/bull4x/frontend/public/terms-of-service.html
+cp account-deletion-policy.html ~/bull4x/frontend/public/account-deletion.html
 
 # Rebuild frontend
-cd ~/setupfx24/frontend
+cd ~/bull4x/frontend
 npm run build
 ```
 
@@ -61,13 +61,13 @@ npm run build
 ## STEP 3: Prepare Graphic Assets
 
 ### App Icon (512x512)
-- Use `assets/Setupfx app icon.png`
+- Use `assets/bull4x-app-icon.png`
 - Resize to exactly 512x512 pixels if not already
 - Must be PNG, 32-bit with alpha channel
 
 ### Feature Graphic (1024x500) — REQUIRED
 - Create using Canva (https://canva.com) or Figma
-- Should show: App name "SetupFX24", trading theme, professional look
+- Should show: App name "Bull4X", trading theme, professional look
 - Dimensions: exactly 1024 x 500 pixels
 - JPG or PNG format
 
@@ -91,7 +91,7 @@ npm run build
 1. Go to https://play.google.com/console
 2. Click "Create app"
 3. Fill in:
-   - **App name:** SetupFX24 - Trading Platform
+   - **App name:** Bull4X - Trading Platform
    - **Default language:** English (United States)
    - **App or game:** App
    - **Free or paid:** Free
@@ -100,7 +100,7 @@ npm run build
 ### 4.2 Store Listing (Main store listing)
 Fill in these fields:
 
-**App name:** SetupFX24 - Trading Platform
+**App name:** Bull4X - Trading Platform
 
 **Short description:**
 ```
@@ -127,7 +127,7 @@ Trade Forex, Commodities, Indices & Crypto with real-time market data.
 5. This will likely result in a **PEGI 18 / Mature 17+** rating
 
 #### Privacy Policy
-- Enter URL: `https://setupfx24.com/privacy-policy`
+- Enter URL: `https://bull4x.com/privacy-policy`
 
 #### Data Safety
 Fill out using the answers in `data-safety.md`:
@@ -137,7 +137,7 @@ Fill out using the answers in `data-safety.md`:
 4. Follow the data types table in data-safety.md for each category
 
 #### Account Deletion
-- Enter URL: `https://setupfx24.com/account-deletion`
+- Enter URL: `https://bull4x.com/account-deletion`
 - Confirm that users can request account deletion
 
 #### Ads
@@ -178,7 +178,7 @@ Since this is a trading app, Google may ask:
 3. Upload the `.aab` file
 4. Add release notes:
    ```
-   Initial release of SetupFX24 Trading Platform
+   Initial release of Bull4X Trading Platform
    - Real-time market data for Forex, Commodities, Indices, and Crypto
    - Execute market and pending orders
    - Secure wallet with multiple payment methods
@@ -202,7 +202,7 @@ Your app is configured for OTA updates via Expo. After publishing to Play Store:
 
 ### Push an OTA update (no new AAB needed):
 ```bash
-cd /path/to/setupfx_mobile_app
+cd /path/to/bull4x_mobile
 eas update --channel production --message "Bug fixes and improvements"
 ```
 

@@ -7,18 +7,27 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
-      "channel": "development"
+      "channel": "development",
+      "env": {
+        "API_BASE_URL": "https://api.bull4x.com"
+      }
     },
     "preview": {
       "distribution": "internal",
       "android": {
         "buildType": "apk"
       },
-      "channel": "preview"
+      "channel": "preview",
+      "env": {
+        "API_BASE_URL": "https://api.bull4x.com"
+      }
     },
     "production": {
       "autoIncrement": true,
-      "channel": "production"
+      "channel": "production",
+      "env": {
+        "API_BASE_URL": "https://api.bull4x.com"
+      }
     },
     "production-apk": {
       "distribution": "internal",
@@ -26,7 +35,10 @@
         "buildType": "apk"
       },
       "autoIncrement": true,
-      "channel": "production"
+      "channel": "production",
+      "env": {
+        "API_BASE_URL": "https://api.bull4x.com"
+      }
     }
   },
   "submit": {

@@ -16,7 +16,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import * as SecureStore from 'expo-secure-store';
 import { Image } from 'react-native';
-import { API_URL } from '../config';
+import { API_BASE_URL, API_URL } from '../config';
 
 const { width, height } = Dimensions.get('window');
 const AUTH_URL = `${API_URL}/auth`;
@@ -90,11 +90,15 @@ const LoginScreen = ({ navigation }) => {
       console.error('Login error:', error);
       let errorMsg = error.message;
       if (error.name === 'AbortError') {
-        errorMsg = 'Connection timeout. Please check your network and ensure you are on the same WiFi as the server.';
+        errorMsg = `Connection timeout.\nAPI: ${API_URL}\nStart backend: npm run backend`;
       } else if (error.message === 'Network request failed') {
-        errorMsg = 'Cannot connect to server. Please ensure:\n1. Phone is on same WiFi as server\n2. Backend is running on port 5001';
+        errorMsg =
+          `Cannot reach server.\nUsing: ${API_BASE_URL}\n\n` +
+          `• Set API_BASE_URL in .env (e.g. https://api.bull4x.com).\n` +
+          `• Check device internet and SSL.\n` +
+          `• Restart Metro: npx expo start -c`;
       }
-      Alert.alert('Login Error', `${errorMsg}\n\nServer: ${AUTH_URL}`);
+      Alert.alert('Login Error', `${errorMsg}\n\n${AUTH_URL}`);
     } finally {
       setLoading(false);
     }
@@ -122,11 +126,11 @@ const LoginScreen = ({ navigation }) => {
         {/* Logo */}
         <View style={styles.logoContainer}>
           <Image 
-            source={require('../../assets/SetupFX.png')} 
+            source={require('../../assets/bull4x-logo.png')} 
             style={styles.logoImage}
             resizeMode="contain"
           />
-          <Text style={styles.brandName}>SetupFX24</Text>
+          <Text style={styles.brandName}>Bull4X</Text>
         </View>
 
         {/* Tab Switcher */}
